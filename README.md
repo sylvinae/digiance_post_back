@@ -17,7 +17,6 @@ Ensure the following tools are installed:
 
 ```bash
 git clone https://github.com/sylvinae/digiance_post_back.git
-cd digiance_post_back
 ```
 
 ### 2. Update the Connection String
@@ -42,10 +41,8 @@ Run the following commands to apply database migrations:
 
 ```bash
 # Navigate to the project directory
-cd <project-folder>
-
 # Add the migrations (if not already present)
-dotnet ef migrations add InitialCreate
+dotnet ef migrations add Initial
 
 # Apply the migrations to the database
 dotnet ef database update
@@ -68,24 +65,3 @@ The API will be available at `https://localhost:7052/api`.
 The API includes Swagger documentation. Once the API is running, access it at:
 
 - `https://localhost:7052/swagger/index.html`
-
-## Common Commands
-
-### Add a Migration
-
-```bash
-dotnet ef migrations add <MigrationName>
-```
-
-### Remove the Last Migration
-
-```bash
-dotnet ef migrations remove
-```
-
-### Update the Database
-
-```bash
-dotnet ef database update
-```
-
